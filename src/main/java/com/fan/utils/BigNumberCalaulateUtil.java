@@ -9,7 +9,7 @@ import java.math.MathContext;
  * @description
  * @see
  */
-public class BigNumberCalculateUtil  {
+public class BigNumberCalaulateUtil{
     public static BigDecimal add(BigDecimal b1, BigDecimal b2) {
         return b1.add(b2);
     }
