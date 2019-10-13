@@ -15,7 +15,6 @@ public class Base64Test {
     public static StringBuffer sb = new StringBuffer("abcdeABCDE");
     public static final Base64Test test = new Base64Test();
 
-
     public static void main(String[] args) {
         test.num(1000*1000);
         test.num(1000*1000*10);
