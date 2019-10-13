@@ -17,11 +17,16 @@ public class Main1 {
         //xml
         ApplicationContext application = new ClassPathXmlApplicationContext("beans.xml");
         Student stu = (Student) application.getBean("stu");
+        Student stu2 = (Student) application.getBean("stu");
         System.out.println(stu);
+        System.out.println(stu == stu2);
 
         //注解
         ApplicationContext app = new AnnotationConfigApplicationContext(AnnotationConfig.class);
+        System.out.println("app init....");
         Student getStudent = (Student) app.getBean("getStudent");
+        Student getStudent2 = (Student) app.getBean("getStudent");
         System.out.println(getStudent);
+        System.out.println(getStudent == getStudent2);
     }
 }
