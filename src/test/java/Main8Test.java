@@ -21,8 +21,11 @@ public class Main8Test {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Cap8MainConfig.class);
         TestService bean = applicationContext.getBean(TestService.class);
         bean.plintln();
+
         TestDao testDao = applicationContext.getBean(TestDao.class);
         System.out.println(testDao);
+
+
 
     }
 }

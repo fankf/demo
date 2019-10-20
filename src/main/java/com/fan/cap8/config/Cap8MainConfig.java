@@ -4,6 +4,7 @@ import com.fan.cap8.dao.TestDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,7 +16,8 @@ import org.springframework.stereotype.Component;
 @Configuration
 @ComponentScan(value = {"com.fan.cap8.controller","com.fan.cap8.service","com.fan.cap8.dao"})
 public class Cap8MainConfig {
-    @Bean("testDao")
+//    @Primary
+    @Bean("testDao2")
     public TestDao testDao(){
         TestDao testDao = new TestDao();
         testDao.setFlag("2");
