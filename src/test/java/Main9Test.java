@@ -21,7 +21,7 @@ public class Main9Test {
 
         Calculate calculate = (Calculate) applicationContext.getBean("calculate");
 
-        int div = calculate.div(3, 1);
+        int div = calculate.div(3, 0);
 
         System.out.println(div);
     }

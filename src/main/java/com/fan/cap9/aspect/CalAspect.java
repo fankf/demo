@@ -1,7 +1,10 @@
 package com.fan.cap9.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+
+import java.util.Arrays;
 
 /**
  * @author fan
@@ -12,34 +15,35 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class CalAspect {
     @Pointcut("execution(public int com.fan.cap9.bean.Calculate.*(..))")
-    public void pointCut(){
+    public void pointCut() {
 
     }
-    @Before("pointCut()")
-    public void before(){
-        System.out.println("before ...");
+
+    @Before(value = "pointCut()")
+    public void before(JoinPoint joinPoint) {
+        System.out.println(joinPoint.getSignature().getName()+"before ..."+ Arrays.asList(joinPoint.getArgs()));
     }
 
     @After("pointCut()")
-    public void after(){
-        System.out.println("after ...");
+    public void after(JoinPoint joinPoint) {
+        System.out.println(joinPoint.getSignature().getName()+"before ..."+ Arrays.asList(joinPoint.getArgs()));
     }
 
-    @AfterReturning("pointCut()")
-    public void AfterReturning(){
-        System.out.println("AfterReturning ...");
+    @AfterReturning(value = "pointCut()", returning ="result")
+    public void AfterReturning(String result) {
+        System.out.println("AfterReturning ..."+result);
     }
 
-    @AfterThrowing("pointCut()")
-    public void AfterThrowing(){
-        System.out.println("AfterThrowing ...");
+    @AfterThrowing(value = "pointCut()", throwing = "e")
+    public void AfterThrowing(Exception e) {
+        System.out.println("AfterThrowing ...异常原因：" + e);
     }
 
-    @Around("pointCut()")
-    public int Around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("Around proceed before...");
-        int k = (int) proceedingJoinPoint.proceed();
-        System.out.println("Around proceed after...");
-        return k;
-    }
+//    @Around("pointCut()")
+//    public int Around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+//        System.out.println("Around proceed before...");
+//        int k = (int) proceedingJoinPoint.proceed();
+//        System.out.println("Around proceed after...");
+//        return k;
+//    }
 }
