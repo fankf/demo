@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @see
  */
 public class Main1 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //xml
         ApplicationContext application = new ClassPathXmlApplicationContext("beans.xml");
         Student stu = (Student) application.getBean("stu");

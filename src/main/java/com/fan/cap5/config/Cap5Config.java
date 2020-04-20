@@ -13,15 +13,15 @@ import org.springframework.context.annotation.Import;
  * @see
  */
 @Configuration
-@Import(value = { Cat.class,DogImportSelect.class,PigImportBeanDefinitionRegistrar.class})
+@Import(value = {Cat.class, DogImportSelect.class, PigImportBeanDefinitionRegistrar.class})
 public class Cap5Config {
     @Bean("person")
-    public Person person(){
-        return new Person("gyb",2);
+    public Person person() {
+        return new Person("gyb", 2);
     }
 
     @Bean("monkeyFactoryBean")
-    public MonkeyFactoryBean monkeyFactoryBean(){
+    public MonkeyFactoryBean monkeyFactoryBean() {
         return new MonkeyFactoryBean();
     }
 }

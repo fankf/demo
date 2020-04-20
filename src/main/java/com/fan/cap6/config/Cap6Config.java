@@ -16,20 +16,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("com.fan.cap6.bean")
 public class Cap6Config {
-    @Bean(initMethod = "init",destroyMethod = "destroy")
-    public Car car(){
+    @Bean(initMethod = "init", destroyMethod = "destroy")
+    public Car car() {
         System.out.println("car 被初始化了 ... ");
         return new Car();
     }
 
     @Bean
-    public Bike bike(){
+    public Bike bike() {
         System.out.println(" BIke 被初始化了 。。。。");
         return new Bike();
     }
 
     @Bean
-    public Plane plane(){
+    public Plane plane() {
         System.out.println(" Plane 被初始化了 。。。。");
         return new Plane();
     }

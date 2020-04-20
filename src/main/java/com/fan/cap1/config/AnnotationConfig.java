@@ -15,11 +15,12 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class AnnotationConfig {
     /**
-     *  Scope "singleton" 单实例
-     *        "prototype" 多实例
-     *        "request"
-     *        "session"
-      * @return
+     * Scope "singleton" 单实例
+     * "prototype" 多实例
+     * "request"
+     * "session"
+     *
+     * @return
      */
 
 //    @Scope("prototype")
@@ -27,6 +28,6 @@ public class AnnotationConfig {
 //    @Lazy
     public Student getStudent() {
         System.out.println("init....");
-        return new Student("fankf","123");
+        return new Student("fankf", "123");
     }
 }

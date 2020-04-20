@@ -14,7 +14,7 @@ public class MainTest2 {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AnnoConfig.class);
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for(String name:beanDefinitionNames){
+        for (String name : beanDefinitionNames) {
             System.out.println(name);
         }
     }

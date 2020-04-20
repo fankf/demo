@@ -13,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main6Test {
 
     @Test
-    public void testMain(){
+    public void testMain() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Cap6Config.class);
         System.out.println(" IOC 容器被创建了 ... ");
         ((AnnotationConfigApplicationContext) applicationContext).close();

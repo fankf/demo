@@ -22,6 +22,7 @@ public class JavaBase64Util {
         decoder = Base64.getDecoder();
         urlDecoder = Base64.getUrlDecoder();
     }
+
     //encode
     public static byte[] encode(byte[] bytes) {
         return encoder.encode(bytes);
@@ -36,9 +37,11 @@ public class JavaBase64Util {
         }
         return null;
     }
+
     public static String encode2String(byte[] bytes) {
         return encoder.encodeToString(bytes);
     }
+
     public static byte[] encode2Byte(String string) {
         return encode(string.getBytes());
     }
@@ -47,6 +50,7 @@ public class JavaBase64Util {
     public static byte[] urlEncode(byte[] bytes) {
         return urlEncoder.encode(bytes);
     }
+
     public static String urlEncode(String string) {
         byte[] encode = urlEncode(string.getBytes());
         try {
@@ -56,27 +60,33 @@ public class JavaBase64Util {
         }
         return null;
     }
+
     public static String urlEncode2String(byte[] bytes) {
         return urlEncoder.encodeToString(bytes);
     }
+
     public static byte[] urlEncode2Byte(String string) {
         return urlEncode(string.getBytes());
     }
+
     //decode
     public static byte[] decode(byte[] bytes) {
         return decoder.decode(bytes);
     }
+
     public static byte[] decode2Byte(String string) {
         return decoder.decode(string.getBytes());
     }
+
     public static String decode2String(byte[] bytes) {
         try {
-            return new String(decoder.decode(bytes),UTF_8);
+            return new String(decoder.decode(bytes), UTF_8);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return null;
     }
+
     public static String decode(String string) {
         byte[] decode = decode(string.getBytes());
         try {
@@ -86,21 +96,25 @@ public class JavaBase64Util {
         }
         return null;
     }
+
     //urlDecode
     public static byte[] urlDecode(byte[] bytes) {
         return urlDecoder.decode(bytes);
     }
+
     public static byte[] urlDecode2Byte(String string) {
         return urlDecode(string.getBytes());
     }
+
     public static String urlDecode2String(byte[] bytes) {
         try {
-            return new String(urlDecode(bytes),UTF_8);
+            return new String(urlDecode(bytes), UTF_8);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return null;
     }
+
     public static String urlDecode(String string) {
         byte[] decode = urlDecode(string.getBytes());
         try {

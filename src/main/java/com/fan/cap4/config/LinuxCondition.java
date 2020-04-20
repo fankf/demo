@@ -20,7 +20,7 @@ public class LinuxCondition implements Condition {
         //获取当前的系统
         Environment environment = conditionContext.getEnvironment();
         String property = environment.getProperty("os.name");
-        if (property.contains("Linux")){
+        if (property.contains("Linux")) {
             return true;
         }
         return false;

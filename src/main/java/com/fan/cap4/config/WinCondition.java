@@ -20,7 +20,7 @@ public class WinCondition implements Condition {
         //获取当前的系统
         Environment environment = conditionContext.getEnvironment();
         String property = environment.getProperty("os.name");
-        if (property.contains("Windows")){
+        if (property.contains("Windows")) {
             return true;
         }
         return false;

@@ -21,17 +21,17 @@ public class CalAspect {
 
     @Before(value = "pointCut()")
     public void before(JoinPoint joinPoint) {
-        System.out.println(joinPoint.getSignature().getName()+"before ..."+ Arrays.asList(joinPoint.getArgs()));
+        System.out.println(joinPoint.getSignature().getName() + "before ..." + Arrays.asList(joinPoint.getArgs()));
     }
 
     @After("pointCut()")
     public void after(JoinPoint joinPoint) {
-        System.out.println(joinPoint.getSignature().getName()+"before ..."+ Arrays.asList(joinPoint.getArgs()));
+        System.out.println(joinPoint.getSignature().getName() + "before ..." + Arrays.asList(joinPoint.getArgs()));
     }
 
-    @AfterReturning(value = "pointCut()", returning ="result")
+    @AfterReturning(value = "pointCut()", returning = "result")
     public void AfterReturning(String result) {
-        System.out.println("AfterReturning ..."+result);
+        System.out.println("AfterReturning ..." + result);
     }
 
     @AfterThrowing(value = "pointCut()", throwing = "e")

@@ -1,4 +1,3 @@
-import com.fan.cap3.config.Main3Config;
 import com.fan.cap4.config.Cap4Config;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main4Test {
 
     @Test
-    public void testMain4(){
+    public void testMain4() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Cap4Config.class);
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
 //        for (String a:beanDefinitionNames){

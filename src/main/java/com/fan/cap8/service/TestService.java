@@ -17,7 +17,7 @@ public class TestService {
     @Autowired
     private TestDao testDao;
 
-    public void plintln(){
+    public void plintln() {
         System.out.println(testDao);
     }
 }

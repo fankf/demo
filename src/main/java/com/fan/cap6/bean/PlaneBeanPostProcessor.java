@@ -14,13 +14,13 @@ import org.springframework.stereotype.Component;
 public class PlaneBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("PlaneBeanPostProcessor postProcessBeforeInitialization 被使用了 ..."+ beanName);
+        System.out.println("PlaneBeanPostProcessor postProcessBeforeInitialization 被使用了 ..." + beanName);
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("PlaneBeanPostProcessor postProcessAfterInitialization 被使用了 ..."+ beanName);
+        System.out.println("PlaneBeanPostProcessor postProcessAfterInitialization 被使用了 ..." + beanName);
 
         return bean;
     }

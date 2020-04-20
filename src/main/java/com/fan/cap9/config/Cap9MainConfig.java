@@ -16,12 +16,12 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class Cap9MainConfig {
     @Bean
-    public Calculate calculate(){
+    public Calculate calculate() {
         return new Calculate();
     }
 
     @Bean
-    public CalAspect calAspect(){
+    public CalAspect calAspect() {
         return new CalAspect();
     }
 }

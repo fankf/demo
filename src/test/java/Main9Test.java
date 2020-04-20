@@ -1,6 +1,3 @@
-import com.fan.cap8.config.Cap8MainConfig;
-import com.fan.cap8.dao.TestDao;
-import com.fan.cap8.service.TestService;
 import com.fan.cap9.bean.Calculate;
 import com.fan.cap9.config.Cap9MainConfig;
 import org.junit.Test;

@@ -10,17 +10,17 @@ import javax.annotation.PreDestroy;
  * @see
  */
 public class Plane {
-    public Plane(){
+    public Plane() {
         System.out.println("Plane construct ....");
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println(" Plane init ...");
     }
 
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         System.out.println(" Plane destroy ...");
     }
 }

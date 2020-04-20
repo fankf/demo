@@ -15,11 +15,11 @@ import org.springframework.core.env.Environment;
 public class Main7Test {
 
     @Test
-    public void testMain(){
+    public void testMain() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Cap7Config.class);
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println("Bean: "+ beanDefinitionName);
+            System.out.println("Bean: " + beanDefinitionName);
         }
         System.out.println(" IOC 容器被创建了 ... ");
         Bird bird = (Bird) applicationContext.getBean("bird");

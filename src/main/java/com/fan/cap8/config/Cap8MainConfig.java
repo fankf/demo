@@ -14,11 +14,11 @@ import org.springframework.stereotype.Component;
  * @see
  */
 @Configuration
-@ComponentScan(value = {"com.fan.cap8.controller","com.fan.cap8.service","com.fan.cap8.dao"})
+@ComponentScan(value = {"com.fan.cap8.controller", "com.fan.cap8.service", "com.fan.cap8.dao"})
 public class Cap8MainConfig {
-//    @Primary
+    //    @Primary
     @Bean("testDao2")
-    public TestDao testDao(){
+    public TestDao testDao() {
         TestDao testDao = new TestDao();
         testDao.setFlag("2");
         return testDao;

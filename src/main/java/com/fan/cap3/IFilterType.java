@@ -30,7 +30,7 @@ public class IFilterType implements TypeFilter {
         Resource resource = metadataReader.getResource();
         System.out.println("--->resource:  " + resource.getFilename());
 
-        if(classMetadata.getClassName().contains("troll")){
+        if (classMetadata.getClassName().contains("troll")) {
             System.out.println("<=======================>");
             return true;
         }

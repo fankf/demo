@@ -24,11 +24,14 @@ public class Bird {
                 ", color='" + color + '\'' +
                 '}';
     }
-    public Bird(){}
-    public Bird(String name, Integer age,String color) {
+
+    public Bird() {
+    }
+
+    public Bird(String name, Integer age, String color) {
         this.age = age;
         this.name = name;
-        this.color =color;
+        this.color = color;
     }
 
     public void setColor(String color) {
